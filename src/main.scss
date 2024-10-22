@@ -1,0 +1,34 @@
+html, body {
+    margin: 0;
+}
+
+html {
+    font-size: 24px;
+    width: auto;
+    font-family: 'Roboto';
+}
+
+body {
+    text-align: center;
+}
+
+.header {
+    background-color: #011827;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0 0.8rem 1rem;
+
+    h1 {
+        font-size: 1rem;
+        color: #FFF;
+        width: 2rem;
+        padding-left: 0.5rem;
+        font-weight: 600;
+    }
+
+    img {
+        width: 30%;
+        flex-shrink: 0;
+    }
+}
+
