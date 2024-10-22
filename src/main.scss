@@ -89,7 +89,74 @@ body {
 
 .popular-challenges {
     font-size: 1.3rem;
-    margin-top: 3.5rem;
+    margin: 3.5rem 0 1em 0;
     font-weight: 400;
     padding: 1em;
+}
+
+
+.challenge-card {
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.2);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+
+    img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .challenge-card-text {
+        padding: 0.5rem;
+        h3 {
+            text-align: left;
+            margin: 0;
+            font-weight: 400;
+        }
+    
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+    
+            li {
+                padding: 5px;
+            }
+    
+            .li-text {
+                font-size: 0.7em;
+                padding-left: 1em;
+    
+            }
+        }
+
+        p {
+            margin-top: 1em;
+            font-weight: 400;
+            font-size: 0.82em;
+            text-align: left;
+        }
+
+        .red-button {
+            background-color: #E3170A;
+            color: #FFF;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.6em;
+            font-weight: 700;
+            padding: 1em 3em;
+            margin-left: 6rem;
+        }
+    }
+
+
+}
+
+
+.image6 {
+    width: 100%;
 }
