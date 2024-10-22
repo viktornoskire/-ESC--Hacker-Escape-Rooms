@@ -27,8 +27,69 @@ body {
     }
 
     img {
-        width: 30%;
-        flex-shrink: 0;
+        width: 6rem;
     }
 }
 
+.main {
+    .image1 {
+        width: 100%;
+    }
+
+    .on-site-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        padding: 0.7em 1.5em;
+        color: #011827;
+        border: none;
+        background-color: #8ACFE5;
+        font-weight: 700;
+        border-radius: 5px;
+    }
+
+    .online-challenges-link {
+        color: #36769D;
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+
+}
+
+.quote-card {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2.8rem;
+
+    img {
+        grid-column: 1;
+        grid-row: span 2;
+        margin-left: 0.6rem;
+    }
+
+    p {
+        grid-column: 2;
+        margin: 0;
+        text-align: left;
+        padding: 0 0.7rem;
+        font-style: italic;
+    }
+    small {
+        grid-column: 2;
+        text-align: left;
+        font-size: 0.7rem;
+        padding: 0 0.7rem;
+    }
+}
+
+.popular-challenges {
+    font-size: 1.3rem;
+    margin-top: 3.5rem;
+    font-weight: 400;
+    padding: 1em;
+}
