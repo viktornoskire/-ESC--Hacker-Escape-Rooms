@@ -98,7 +98,7 @@ body {
 .challenge-card {
     border-radius: 10px;
     box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.2);
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -128,7 +128,7 @@ body {
             }
     
             .li-text {
-                font-size: 0.7em;
+                font-size: 0.6em;
                 padding-left: 1em;
     
             }
@@ -137,8 +137,9 @@ body {
         p {
             margin-top: 1em;
             font-weight: 400;
-            font-size: 0.82em;
+            font-size: 1em;
             text-align: left;
+            font-size: 0.7rem;
         }
 
         .red-button {
@@ -150,6 +151,9 @@ body {
             font-weight: 700;
             padding: 1em 3em;
             margin-left: 6rem;
+            display: block;
+            margin-left: auto;
+            margin-right: 0.1rem;
         }
     }
 
