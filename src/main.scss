@@ -290,23 +290,45 @@ body {
 .footer {
     text-align: left;
     background-color: #011827;
+    color: #FFF;
+    padding: 2rem 1rem;
 
     .footer__company-title {
-
+        font-size: 0.8em;
+        margin-bottom: 0.5em;
     }
      .company-info__text {
-
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin: 0;
     }
 
     .footer__site-map {
-        .site-map__nav-bar {
+        font-size: 0.8rem;
+        margin-bottom: 0.4em;
+    }
 
+    .site-map__alternative {
+        font-size: 0.75rem;
+        
+        p {
+            margin: 0;
+        }
+
+        .alternative__play-online {
+            margin-top: 1rem;
         }
     }
 
     .footer__social-media {
-        .social-media__link {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
 
+    .social-media__alternative {
+        font-size: 0.75rem;
+        p {
+            margin: 0;
         }
     }
 
