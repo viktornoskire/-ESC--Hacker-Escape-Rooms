@@ -104,61 +104,127 @@ body {
         padding: 1em;
     }
 
-    .main__challenge {
-        border-radius: 10px;
-        box-shadow: 0 0 5px 2px #B6BDB5;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2rem;
-    
-        .challenge__image {
-            width: 100%;
-            border-radius: 10px 10px 0 0;
-        }
-    
-        .challenge__challenge-text {
-            padding: 0.5rem;
+    .main__challenge-container {
+        display: flex;
+        overflow: scroll;
+        padding: 5px 0 0 0;
 
-            .challenge-text__title {
-                text-align: left;
-                margin: 0;
-                font-weight: 400;
+        .challenge-container__challenge-1 {
+            border-radius: 10px;
+            box-shadow: 0 0 5px 2px #B6BDB5;
+            width: 75%;
+            margin-left: 50px;
+            margin-right: auto;
+            margin-bottom: 2rem;
+            flex-shrink: 0;
+        
+            .challenge__image {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
             }
         
-            .challenge-text__rating {
-                display: flex;
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                align-items: center;
-        
-                .rating__star {
-                    padding: 5px;
+            .challenge__challenge-text {
+                padding: 0.5rem;
+    
+                .challenge-text__title {
+                    text-align: left;
+                    margin: 0;
+                    font-weight: 400;
+                }
+            
+                .challenge-text__rating {
+                    display: flex;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    align-items: center;
+            
+                    .rating__star {
+                        padding: 5px;
+                    }
+            
+                    .rating__participants {
+                        font-size: 50%;
+                        padding-left: 1em;
+            
+                    }
                 }
         
-                .rating__participants {
-                    font-size: 0.6em;
-                    padding-left: 1em;
-        
+                .challenge-text__info {
+                    margin-top: 1em;
+                    font-weight: 400;
+                    font-size: 1em;
+                    text-align: left;
+                    font-size: 0.7rem;
                 }
-            }
     
-            .challenge-text__info {
-                margin-top: 1em;
-                font-weight: 400;
-                font-size: 1em;
-                text-align: left;
-                font-size: 0.7rem;
+                .challenge-text__book-button {
+                    @include red-button();
+                    display: block;
+                    margin-left: auto;
+                    margin-right: 0.1rem;
+                }    
             }
-
-            .challenge-text__book-button {
-                @include red-button();
-                display: block;
-                margin-left: auto;
-                margin-right: 0.1rem;
-            }    
         }
+
+        .challenge-container__challenge-2 {
+            border-radius: 10px;
+            box-shadow: 0 0 5px 2px #B6BDB5;
+            width: 70%;
+            margin-left: 45px;
+            margin-right: 50px;
+            margin-bottom: 2rem;
+            flex-shrink: 0;
+        
+            .challenge__image {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+        
+            .challenge__challenge-text {
+                padding: 0.5rem;
+    
+                .challenge-text__title {
+                    text-align: left;
+                    margin: 0;
+                    font-weight: 400;
+                }
+            
+                .challenge-text__rating {
+                    display: flex;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    align-items: center;
+            
+                    .rating__star {
+                        padding: 5px;
+                    }
+            
+                    .rating__participants {
+                        font-size: 50%;
+                        padding-left: 1em;
+            
+                    }
+                }
+        
+                .challenge-text__info {
+                    margin-top: 1em;
+                    font-weight: 400;
+                    font-size: 1em;
+                    text-align: left;
+                    font-size: 0.7rem;
+                }
+    
+                .challenge-text__book-button {
+                    @include red-button();
+                    display: block;
+                    margin-left: auto;
+                    margin-right: 0.1rem;
+                }    
+            }
+        }
+    
     }
     
     .main__story {
@@ -201,6 +267,10 @@ body {
         }
     }
 
+    .main__online-kelly {
+        width: 100%;
+    }
+
     .main__play-online {
         text-align: left;
         padding: 1em 1em;
@@ -221,7 +291,7 @@ body {
     text-align: left;
     background-color: #011827;
 
-    .footer__company-info {
+    .footer__company-title {
 
     }
      .company-info__text {
