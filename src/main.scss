@@ -1,3 +1,15 @@
+
+@mixin red-button {
+    background-color: #E3170A;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.6em;
+    font-weight: 700;
+    padding: 1em 3em;
+}
+
+
 html, body {
     margin: 0;
 }
@@ -18,25 +30,25 @@ body {
     align-items: center;
     padding: 0.8rem 0 0.8rem 1rem;
 
-    h1 {
+    .header__logo {
+        width: 6rem;
+    }
+
+    .header__title {
         font-size: 1rem;
         color: #FFF;
         width: 2rem;
         padding-left: 0.5rem;
         font-weight: 600;
     }
-
-    img {
-        width: 6rem;
-    }
 }
 
 .main {
-    .image1 {
+    .main__hacker {
         width: 100%;
     }
 
-    .on-site-button {
+    .main__on-site-button {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -51,116 +63,182 @@ body {
         border-radius: 5px;
     }
 
-    .online-challenges-link {
+    .main__online-link {
         color: #36769D;
         font-weight: 700;
         font-size: 0.7em;
     }
 
-}
-
-.quote-card {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 2.8rem;
-
-    img {
-        grid-column: 1;
-        grid-row: span 2;
-        margin-left: 0.6rem;
-    }
-
-    p {
-        grid-column: 2;
-        margin: 0;
-        text-align: left;
-        padding: 0 0.7rem;
-        font-style: italic;
-    }
-    small {
-        grid-column: 2;
-        text-align: left;
-        font-size: 0.7rem;
-        padding: 0 0.7rem;
-    }
-}
-
-.popular-challenges {
-    font-size: 1.3rem;
-    margin: 3.5rem 0 1em 0;
-    font-weight: 400;
-    padding: 1em;
-}
-
-
-.challenge-card {
-    border-radius: 10px;
-    box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.2);
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
-
-    img {
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-    }
-
-    .challenge-card-text {
-        padding: 0.5rem;
-        h3 {
+    .main__quote-card {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 2.8rem;
+    
+        .quote-card__profile-picture {
+            grid-column: 1;
+            grid-row: span 2;
+            margin-left: 0.6rem;
+        }
+    
+        .quote-card__quote {
+            grid-column: 2;
+            margin: 0;
             text-align: left;
-            margin: 0;
-            font-weight: 400;
+            padding: 0 0.7rem;
+            font-style: italic;
         }
-    
-        ul {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            align-items: center;
-    
-            li {
-                padding: 5px;
-            }
-    
-            .li-text {
-                font-size: 0.6em;
-                padding-left: 1em;
-    
-            }
-        }
-
-        p {
-            margin-top: 1em;
-            font-weight: 400;
-            font-size: 1em;
+        .quote-card__visit {
+            grid-column: 2;
             text-align: left;
             font-size: 0.7rem;
-        }
-
-        .red-button {
-            background-color: #E3170A;
-            color: #FFF;
-            border: none;
-            border-radius: 5px;
-            font-size: 0.6em;
-            font-weight: 700;
-            padding: 1em 3em;
-            margin-left: 6rem;
-            display: block;
-            margin-left: auto;
-            margin-right: 0.1rem;
+            padding: 0 0.7rem;
         }
     }
 
+    .main__popular-challenge {
+        font-size: 1.3rem;
+        margin: 3.5rem 0 1em 0;
+        font-weight: 400;
+        padding: 1em;
+    }
+
+    .main__challenge {
+        border-radius: 10px;
+        box-shadow: 0 0 5px 2px #B6BDB5;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    
+        .challenge__image {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+    
+        .challenge__challenge-text {
+            padding: 0.5rem;
+
+            .challenge-text__title {
+                text-align: left;
+                margin: 0;
+                font-weight: 400;
+            }
+        
+            .challenge-text__rating {
+                display: flex;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                align-items: center;
+        
+                .rating__star {
+                    padding: 5px;
+                }
+        
+                .rating__participants {
+                    font-size: 0.6em;
+                    padding-left: 1em;
+        
+                }
+            }
+    
+            .challenge-text__info {
+                margin-top: 1em;
+                font-weight: 400;
+                font-size: 1em;
+                text-align: left;
+                font-size: 0.7rem;
+            }
+
+            .challenge-text__book-button {
+                @include red-button();
+                display: block;
+                margin-left: auto;
+                margin-right: 0.1rem;
+            }    
+        }
+    }
+    
+    .main__story {
+        background-color: #011827;
+        
+        .story__info {
+            color: #FFF;
+            font-weight: 400;
+            padding: 3rem 1.5rem 1rem;
+        }
+    
+        .story__view-story {
+            font-size: 0.9rem;
+            background-color: transparent;
+            border: 2px solid #8ACFE5;
+            margin-bottom: 3rem;
+            color: #8ACFE5;
+            padding: 0.8em 3em;
+            border-radius: 5px;
+            font-weight: 700;
+        }    
+    }
+
+    .main__guidance {
+        width: 100%
+    }
+    
+    .main__on-site {
+        text-align: left;
+        padding: 1em 1em;
+        
+        .on-site__title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0;
+        }
+    
+        .on-site__book-button {
+            @include red-button();
+        }
+    }
+
+    .main__play-online {
+        text-align: left;
+        padding: 1em 1em;
+        .play-online__title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0;
+        }
+    
+        .play-online__see-challenges {
+            @include red-button();
+        }
+    }
 
 }
 
+.footer {
+    text-align: left;
+    background-color: #011827;
 
-.image6 {
-    width: 100%;
+    .footer__company-info {
+
+    }
+     .company-info__text {
+
+    }
+
+    .footer__site-map {
+        .site-map__nav-bar {
+
+        }
+    }
+
+    .footer__social-media {
+        .social-media__link {
+
+        }
+    }
+
 }
+
