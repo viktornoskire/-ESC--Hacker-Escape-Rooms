@@ -1,0 +1,786 @@
+html,
+body {
+  margin: 0;
+}
+
+html {
+  font-size: 24px;
+  font-family: "Roboto";
+}
+
+.container {
+  text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.container .header {
+  background-color: #011827;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0 0.8rem 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .header {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: auto 90%;
+    grid-row: 75% 25%;
+    padding-bottom: 0.5rem;
+  }
+}
+.container .header .header__logo {
+  width: 6rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .header .header__logo {
+    grid-row: 1;
+    grid-column: 1;
+    width: 5rem;
+  }
+}
+.container .header .header__title {
+  font-size: 1rem;
+  color: #FFF;
+  width: 2rem;
+  padding-left: 0.5rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 1000px) {
+  .container .header .header__title {
+    grid-row: 1;
+    grid-column: 2;
+    width: auto;
+    text-align: start;
+    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+  }
+}
+.container .header .header__nav-bar {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .container .header .header__nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    grid-row: 2;
+    grid-column: 1/3;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem 0 0.5rem;
+  }
+}
+.container .header .header__nav-bar a {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #FFF;
+  text-decoration: none;
+}
+.container .header .header__nav-bar a:hover {
+  color: #8ACFE5;
+}
+@media screen and (min-width: 1000px) {
+  .container .main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+.container .main .main__hacker {
+  width: 100%;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__hacker {
+    grid-row: 1;
+    grid-column: 1/3;
+    width: 100%;
+    height: 15.5rem;
+    object-fit: cover;
+  }
+}
+.container .main .main__on-site-button-1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 1em 2.5em;
+  color: #011827;
+  border: none;
+  background-color: #8ACFE5;
+  font-weight: 700;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__on-site-button-1 {
+    font-size: 0.8rem;
+    padding: 1em 3em;
+    margin-left: 5px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__on-site-button-1 {
+    grid-row: 2;
+    grid-column: 2;
+    margin-top: -32px;
+  }
+}
+.container .main .main__online-button-1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.7em 1.5em;
+  color: #36769D;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__online-button-1 {
+    background-color: #E3170A;
+    border-radius: 5px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 1em 3em;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__online-button-1 {
+    grid-row: 2;
+    grid-column: 1;
+    margin-top: -32px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__quote-cards {
+    grid-row: 3;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 1rem 2.5rem 0;
+  }
+}
+.container .main .main__quote-cards .quote-cards__qoute-card-1 {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2.8rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__quote-cards .quote-cards__qoute-card-1 {
+    grid-row: 1;
+    grid-column: 1;
+    width: 110%;
+    font-size: 0.8rem;
+  }
+}
+.container .main .main__quote-cards .quote-cards__qoute-card-1 .quote-card__profile-picture {
+  grid-column: 1;
+  grid-row: span 2;
+  margin-left: auto;
+  margin-right: 0.4rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__quote-cards .quote-cards__qoute-card-1 .quote-card__profile-picture {
+    margin-right: -5px;
+  }
+}
+.container .main .main__quote-cards .quote-cards__qoute-card-1 .quote-card__quote {
+  grid-column: 2;
+  margin: 0;
+  text-align: left;
+  padding: 0 0.7rem;
+  font-style: italic;
+}
+.container .main .main__quote-cards .quote-cards__qoute-card-1 .quote-card__visit {
+  grid-column: 2;
+  text-align: left;
+  font-size: 0.7rem;
+  padding: 0 0.7rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__quote-cards .quote-cards__qoute-card-1 .quote-card__visit {
+    font-size: 0.8em;
+    margin-top: 10px;
+    width: 60%;
+  }
+}
+.container .main .main__quote-cards .quote-cards__qoute-card-2 {
+  display: none;
+  grid-template-columns: 20% 80%;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2.8rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__quote-cards .quote-cards__qoute-card-2 {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+    width: 110%;
+    font-size: 0.8rem;
+  }
+}
+.container .main .main__quote-cards .quote-cards__qoute-card-2 .quote-card__profile-picture {
+  grid-column: 1;
+  grid-row: span 2;
+  margin-left: auto;
+  margin-right: 0.4rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__quote-cards .quote-cards__qoute-card-2 .quote-card__profile-picture {
+    margin-right: -5px;
+  }
+}
+.container .main .main__quote-cards .quote-cards__qoute-card-2 .quote-card__quote {
+  grid-column: 2;
+  margin: 0;
+  text-align: left;
+  padding: 0 0.7rem;
+  font-style: italic;
+}
+.container .main .main__quote-cards .quote-cards__qoute-card-2 .quote-card__visit {
+  grid-column: 2;
+  text-align: left;
+  font-size: 0.7rem;
+  padding: 0 0.7rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__quote-cards .quote-cards__qoute-card-2 .quote-card__visit {
+    font-size: 0.8em;
+    margin-top: 10px;
+    width: 60%;
+  }
+}
+.container .main .main__popular-challenge {
+  font-size: 1.3rem;
+  margin: 3.5rem 0 1rem 0;
+  font-weight: 400;
+  padding: 1em 0 0.5em 0;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__popular-challenge {
+    grid-row: 4;
+    grid-column: 1/3;
+    margin-bottom: 2rem;
+  }
+}
+.container .main .main__challenge-container {
+  display: flex;
+  overflow: scroll;
+  padding: 5px 0 0 0;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container {
+    grid-row: 5;
+    grid-column: 1/3;
+    overflow: visible;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 {
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px #B6BDB5;
+  width: 75%;
+  flex-shrink: 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text {
+  padding: 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text {
+    padding: 0.3rem;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text .challenge-text__title {
+  text-align: left;
+  margin: 0;
+  font-weight: 400;
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text .challenge-text__rating {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text .challenge-text__rating .rating__star-content {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text .challenge-text__rating .rating__star-content .star-content__star {
+  padding-right: 5px;
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text .challenge-text__rating .rating__participants {
+  font-size: 60%;
+  margin: 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text .challenge-text__info {
+  margin-top: 1em;
+  font-weight: 400;
+  text-align: left;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text .challenge-text__info {
+    font-size: 0.65rem;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 .challenge__challenge-text .challenge-text__book-button {
+  background-color: #E3170A;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.6em;
+  font-weight: 700;
+  padding: 1em 3em;
+  display: block;
+  margin-left: auto;
+  margin-right: 0.1rem;
+}
+.container .main .main__challenge-container .challenge-container__challenge-1 {
+  margin: 0 0.8rem 1rem 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-1 {
+    margin: 0 0.5rem 0 1rem;
+    width: 30%;
+    font-size: 0.8rem;
+  }
+  .container .main .main__challenge-container .challenge-container__challenge-1 .challenge-text__rating {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 {
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px #B6BDB5;
+  width: 75%;
+  flex-shrink: 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text {
+  padding: 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text {
+    padding: 0.3rem;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text .challenge-text__title {
+  text-align: left;
+  margin: 0;
+  font-weight: 400;
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text .challenge-text__rating {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text .challenge-text__rating .rating__star-content {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text .challenge-text__rating .rating__star-content .star-content__star {
+  padding-right: 5px;
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text .challenge-text__rating .rating__participants {
+  font-size: 60%;
+  margin: 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text .challenge-text__info {
+  margin-top: 1em;
+  font-weight: 400;
+  text-align: left;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text .challenge-text__info {
+    font-size: 0.65rem;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 .challenge__challenge-text .challenge-text__book-button {
+  background-color: #E3170A;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.6em;
+  font-weight: 700;
+  padding: 1em 3em;
+  display: block;
+  margin-left: auto;
+  margin-right: 0.1rem;
+}
+.container .main .main__challenge-container .challenge-container__challenge-2 {
+  margin: 0 2rem 1rem 0.8rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-2 {
+    margin: 0 0.5rem 0 0.5rem;
+    width: 30%;
+    font-size: 0.8rem;
+  }
+  .container .main .main__challenge-container .challenge-container__challenge-2 .challenge-text__rating {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 {
+  display: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px #B6BDB5;
+  width: 75%;
+  flex-shrink: 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text {
+  padding: 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text {
+    padding: 0.3rem;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text .challenge-text__title {
+  text-align: left;
+  margin: 0;
+  font-weight: 400;
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text .challenge-text__rating {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text .challenge-text__rating .rating__star-content {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text .challenge-text__rating .rating__star-content .star-content__star {
+  padding-right: 5px;
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text .challenge-text__rating .rating__participants {
+  font-size: 60%;
+  margin: 0;
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text .challenge-text__info {
+  margin-top: 1em;
+  font-weight: 400;
+  text-align: left;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text .challenge-text__info {
+    font-size: 0.65rem;
+  }
+}
+.container .main .main__challenge-container .challenge-container__challenge-3 .challenge__challenge-text .challenge-text__book-button {
+  background-color: #E3170A;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.6em;
+  font-weight: 700;
+  padding: 1em 3em;
+  display: block;
+  margin-left: auto;
+  margin-right: 0.1rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__challenge-container .challenge-container__challenge-3 {
+    display: block;
+    width: 30%;
+    margin: 0 1rem 0 0.5rem;
+    font-size: 0.8rem;
+  }
+  .container .main .main__challenge-container .challenge-container__challenge-3 .challenge-text__rating {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.container .main .main__on-site-button-2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 1em 2.5em;
+  color: #011827;
+  border: none;
+  background-color: #8ACFE5;
+  font-weight: 700;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__on-site-button-2 {
+    font-size: 0.8rem;
+    padding: 1em 3em;
+    margin-left: 5px;
+  }
+}
+.container .main .main__on-site-button-2 {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__on-site-button-2 {
+    grid-row: 6;
+    grid-column: 2;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+}
+.container .main .main__online-button-2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.7em 1.5em;
+  color: #36769D;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__online-button-2 {
+    background-color: #E3170A;
+    border-radius: 5px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 1em 3em;
+    margin-right: 5px;
+  }
+}
+.container .main .main__online-button-2 {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__online-button-2 {
+    grid-row: 6;
+    grid-column: 1;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+}
+.container .main .main__story {
+  background-color: #011827;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__story {
+    grid-row: 7;
+    grid-column: 1/3;
+  }
+}
+.container .main .main__story .story__info {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 1.2em;
+  padding: 3rem 0.5rem 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__story .story__info {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.container .main .main__story .story__view-story {
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 2px solid #8ACFE5;
+  margin-bottom: 3rem;
+  color: #8ACFE5;
+  padding: 0.8em 3em;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.container .main .main__guidance {
+  width: 100%;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__guidance {
+    grid-row: 8;
+    grid-column: 1;
+    width: 100%;
+    height: 16.5rem;
+    object-fit: cover;
+  }
+}
+.container .main .main__on-site {
+  text-align: left;
+  padding: 1em 1em 2.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__on-site {
+    padding: 1.8rem 3rem;
+    width: 70%;
+  }
+}
+.container .main .main__on-site .on-site__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__on-site .on-site__title {
+    font-size: 1.2rem;
+  }
+}
+.container .main .main__on-site .on-site__info {
+  margin: 1rem 0 1.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__on-site .on-site__info {
+    font-size: 0.8rem;
+    margin: 0.8rem 0;
+  }
+}
+.container .main .main__on-site .on-site__book-button {
+  background-color: #E3170A;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.6em;
+  font-weight: 700;
+  padding: 1em 3em;
+  font-size: 0.8rem;
+}
+.container .main .main__online-kelly {
+  width: 100%;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__online-kelly {
+    grid-row: 9;
+    grid-column: 2;
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    margin-bottom: 5rem;
+  }
+}
+.container .main .main__play-online {
+  text-align: left;
+  padding: 1em 1em 3rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__play-online {
+    padding: 2rem 3rem;
+    width: 70%;
+  }
+}
+.container .main .main__play-online .play-online__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__play-online .play-online__title {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container .main .main__play-online .play-online__info {
+    font-size: 0.8rem;
+  }
+}
+.container .main .main__play-online .play-online__see-challenges {
+  background-color: #E3170A;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.6em;
+  font-weight: 700;
+  padding: 1em 3em;
+  font-size: 0.8rem;
+}
+.container .footer {
+  text-align: left;
+  background-color: #011827;
+  color: #FFF;
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .footer {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container .footer .footer__company-info {
+    width: 70%;
+  }
+}
+.container .footer .footer__company-info .company-info__title {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+}
+.container .footer .footer__company-info .company-info__text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin: 0;
+}
+.container .footer .footer__site-map {
+  margin: 2rem 0;
+}
+@media screen and (min-width: 1000px) {
+  .container .footer .footer__site-map {
+    width: 50%;
+    margin: 0 2rem;
+  }
+}
+.container .footer .footer__site-map .site-map__title {
+  font-size: 0.8rem;
+  margin-bottom: 0.4em;
+}
+.container .footer .footer__site-map .site-map__alternative {
+  font-size: 0.75rem;
+}
+.container .footer .footer__site-map .site-map__alternative p {
+  margin: 0;
+}
+.container .footer .footer__site-map .site-map__alternative .alternative__play-online {
+  margin-top: 1rem;
+}
+.container .footer .footer__social-media .social-media__title {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+.container .footer .footer__social-media .social-media__alternative {
+  font-size: 0.75rem;
+}
+.container .footer .footer__social-media .social-media__alternative p {
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
