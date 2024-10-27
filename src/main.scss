@@ -10,11 +10,8 @@
 
 @mixin challenge-container__challenge {
     border-radius: 10px;
-    box-shadow: 0 0 5px 2px #B6BDB5;
+    box-shadow: 0 0 5px 1px #B6BDB5;
     width: 75%;
-    margin-left: 2.3rem;
-    margin-right: 2.3rem;
-    margin-bottom: 2rem;
     flex-shrink: 0;
 
     .challenge__image {
@@ -24,6 +21,10 @@
 
     .challenge__challenge-text {
         padding: 0.5rem;
+
+        @media screen and (min-width: 1000px) {
+            padding: 0.3rem;
+        }
 
         .challenge-text__title {
             text-align: left;
@@ -38,14 +39,19 @@
             padding: 0;
             align-items: center;
 
-            .rating__star {
-                padding: 5px;
+
+            .rating__star-content {
+                margin-right: 5px;
+                margin-left: 5px;
+
+                .star-content__star {
+                    padding-right: 5px;
+                }
             }
 
             .rating__participants {
                 font-size: 60%;
-                padding-left: 0.6em;
-                margin-top: 3px;
+                margin: 0;
             }
         }
 
@@ -54,6 +60,10 @@
             font-weight: 400;
             text-align: left;
             font-size: 0.75rem;
+
+            @media screen and (min-width: 1000px) {
+                font-size: 0.65rem;
+            }
         }
 
         .challenge-text__book-button {
@@ -138,8 +148,22 @@ html {
         align-items: center;
         padding: 0.8rem 0 0.8rem 1rem;
 
+        @media screen and (min-width: 1000px) {
+            display: grid;
+            align-items: flex-end;
+            grid-template-columns: auto 90%;
+            grid-row: 75% 25%;
+            padding-bottom: 0.5rem;
+        }
+
         .header__logo {
             width: 6rem;
+
+            @media screen and (min-width: 1000px) {
+                grid-row: 1;
+                grid-column: 1;
+                width: 5rem;
+            }
         }
 
         .header__title {
@@ -148,23 +172,60 @@ html {
             width: 2rem;
             padding-left: 0.5rem;
             font-weight: 600;
+
+            @media screen and (min-width: 1000px) {
+                grid-row: 1;
+                grid-column: 2;
+                width: auto;
+                text-align: start;
+                margin-bottom: 0.3rem;
+                font-size: 1.3rem;
+            }
         }
 
+        .header__nav-bar {
+            display: none;
 
+            @media screen and (min-width: 1000px) {
+                display: flex;
+                justify-content: space-evenly;
+                grid-row: 2;
+                grid-column: 1 / 3;
+                width: 75%;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 2rem 0 0.5rem;
+            }
 
+            a {
+                font-size: 0.8em;
+                font-weight: 700;
+                color: #FFF;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #8ACFE5;
+            }
+        }
     }
 
     .main {
         @media screen and (min-width: 1000px) {
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-row: auto;
         }
 
         .main__hacker {
             width: 100%;
-            grid-row: 1;
-            grid-column: 1 / 3;
+
+            @media screen and (min-width: 1000px) {
+                grid-row: 1;
+                grid-column: 1 / 3;
+                width: 100%;
+                height: 15.5rem;
+                object-fit: cover
+            }
         }
 
         .main__on-site-button-1 {
@@ -173,7 +234,7 @@ html {
             @media screen and (min-width: 1000px) {
                 grid-row: 2;
                 grid-column: 2;
-                margin-top: -30px;
+                margin-top: -32px;
             }
         }
 
@@ -183,7 +244,7 @@ html {
             @media screen and (min-width: 1000px) {
                 grid-row: 2;
                 grid-column: 1;
-                margin-top: -30px;
+                margin-top: -32px;
             }
         }
 
@@ -238,7 +299,7 @@ html {
                     @media screen and (min-width: 1000px) {
                         font-size: 0.8em;
                         margin-top: 10px;
-                        width: 70%;
+                        width: 60%;
                     }
                 }
             }
@@ -286,7 +347,7 @@ html {
                     @media screen and (min-width: 1000px) {
                         font-size: 0.8em;
                         margin-top: 10px;
-                        width: 70%;
+                        width: 60%;
                     }
                 }
             }
@@ -294,13 +355,14 @@ html {
 
         .main__popular-challenge {
             font-size: 1.3rem;
-            margin: 3.5rem 0 0.5em 0;
+            margin: 3.5rem 0 1rem 0;
             font-weight: 400;
-            padding: 1em;
+            padding: 1em 0 0.5em 0;
 
             @media screen and (min-width: 1000px) {
                 grid-row: 4;
                 grid-column: 1 / 3;
+                margin-bottom: 2rem;
             }
         }
 
@@ -309,14 +371,44 @@ html {
             overflow: scroll;
             padding: 5px 0 0 0;
 
+            @media screen and (min-width: 1000px) {
+                grid-row: 5;
+                grid-column: 1 / 3;
+                overflow: visible;
+            }
+
+
             .challenge-container__challenge-1 {
                 @include challenge-container__challenge();
-                margin-right: 0.9rem;
+                & {margin: 0 0.8rem 1rem 2rem};
+
+                @media screen and (min-width: 1000px) {
+                    margin: 0 0.5rem 0 1rem;
+                    width: 30%;
+                    font-size: 0.8rem;
+
+                    .challenge-text__rating {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
             }
 
             .challenge-container__challenge-2 {
                 @include challenge-container__challenge();
-                margin-left: 0.9rem;
+                & {margin: 0 2rem 1rem 0.8rem};
+
+                @media screen and (min-width: 1000px) {
+                    margin: 0 0.5rem 0 0.5rem;
+                    width: 30%;
+                    font-size: 0.8rem;
+
+                    .challenge-text__rating {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+
             }
 
             .challenge-container__challenge-3 {
@@ -325,33 +417,39 @@ html {
 
                 @media screen and (min-width: 1000px) {
                     display: block;
+                    width: 30%;
+                    margin: 0 1rem 0 0.5rem;
+                    font-size: 0.8rem;
+
+                    .challenge-text__rating {
+                        display: flex;
+                        justify-content: space-between;
+                    }
                 }
             }
-
-            @media screen and (min-width: 1000px) {
-                grid-row: 5;
-                grid-column: 1 / 3;
-                width: 45%;
-                overflow: visible;
-            }
-
         }
 
         .main__on-site-button-2 {
             @include on-site-button();
+            & {margin-top: 2rem};
 
             @media screen and (min-width: 1000px) {
                 grid-row: 6;
                 grid-column: 2;
+                margin-bottom: 3rem;
+                margin-top: 3rem;
             }
         }
 
         .main__online-button-2 {
             @include online-button();
+            & {margin-bottom: 2rem};
 
             @media screen and (min-width: 1000px) {
                 grid-row: 6;
                 grid-column: 1;
+                margin-bottom: 3rem;
+                margin-top: 3rem;
             }
         }
 
@@ -366,7 +464,14 @@ html {
             .story__info {
                 color: #FFF;
                 font-weight: 400;
-                padding: 3rem 1.5rem 1rem;
+                font-size: 1.2em;
+                padding: 3rem 0.5rem 1rem;
+
+                @media screen and (min-width: 1000px) {
+                    width: 60%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
 
             .story__view-story {
@@ -387,21 +492,42 @@ html {
             @media screen and (min-width: 1000px) {
                 grid-row: 8;
                 grid-column: 1;
+                width: 100%;
+                height: 16.5rem;
+                object-fit: cover;
             }
         }
 
         .main__on-site {
             text-align: left;
-            padding: 1em 1em;
+            padding: 1em 1em 2.5rem;
+
+            @media screen and (min-width: 1000px) {
+                padding: 1.8rem 3rem;
+                width: 70%;
+            }
 
             .on-site__title {
                 font-size: 1.3rem;
                 font-weight: 700;
                 margin: 0;
+
+                @media screen and (min-width: 1000px) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .on-site__info {
+                margin: 1rem 0 1.5rem;
+                @media screen and (min-width: 1000px) {
+                    font-size: 0.8rem;
+                    margin: 0.8rem 0;
+                }
             }
 
             .on-site__book-button {
                 @include red-button();
+                font-size: 0.8rem;
             }
         }
 
@@ -411,26 +537,41 @@ html {
             @media screen and (min-width: 1000px) {
                 grid-row: 9;
                 grid-column: 2;
-                margin-bottom: 6rem;
+                width: 100%;
+                height: 16rem;
+                object-fit: cover;
+                margin-bottom: 5rem;
             }
         }
 
         .main__play-online {
             text-align: left;
-            padding: 1em 1em;
+            padding: 1em 1em 3rem;
 
             @media screen and (min-width: 1000px) {
-                padding: 0 3rem;
+                padding: 2rem 3rem;
+                width: 70%;
             }
 
             .play-online__title {
                 font-size: 1.3rem;
                 font-weight: 700;
                 margin: 0;
+
+                @media screen and (min-width: 1000px) {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .play-online__info {
+                @media screen and (min-width: 1000px) {
+                    font-size: 0.8rem;
+                }
             }
 
             .play-online__see-challenges {
                 @include red-button();
+                font-size: 0.8rem;
             }
         }
     }
