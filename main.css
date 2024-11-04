@@ -13,7 +13,7 @@ html {
 }
 @media screen and (min-width: 1000px) {
   .container {
-    max-width: 1400px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -21,8 +21,9 @@ html {
 .container .header {
   background-color: #011827;
   display: flex;
+  position: relative;
   align-items: center;
-  padding: 0.8rem 0 0.8rem 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
 }
 @media screen and (min-width: 1000px) {
   .container .header {
@@ -58,6 +59,16 @@ html {
     text-align: start;
     margin-bottom: 0.3rem;
     font-size: 1.3rem;
+  }
+}
+.container .header .header__menu-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .container .header .header__menu-button {
+    display: none;
   }
 }
 .container .header .header__nav-bar {
