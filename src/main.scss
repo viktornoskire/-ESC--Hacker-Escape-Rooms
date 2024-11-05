@@ -156,7 +156,7 @@ html {
             grid-row: 75% 25%;
             padding-bottom: 0.5rem;
         }
-
+        
         .header__logo {
             width: 6rem;
 
@@ -186,8 +186,9 @@ html {
 
         .header__menu-button {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 0.7rem;
+            right: 0.7rem;
+            padding: 0.3rem;
 
             @media screen and (min-width: 1000px) {
                 display: none;
@@ -219,6 +220,20 @@ html {
                 color: #8ACFE5;
             }
         }
+    }
+
+    .menu-window {
+        display: none;
+    }
+
+    .menu-window__active {
+        display: block;
+        position: fixed; 
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem; 
+        background-color: lightblue;
     }
 
     .main {
