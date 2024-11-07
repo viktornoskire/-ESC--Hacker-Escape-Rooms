@@ -63,8 +63,9 @@ html {
 }
 .container .header .header__menu-button {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.3rem;
 }
 @media screen and (min-width: 1000px) {
   .container .header .header__menu-button {
@@ -94,6 +95,59 @@ html {
 }
 .container .header .header__nav-bar a:hover {
   color: #8ACFE5;
+}
+@keyframes menu-window__animation {
+  0% {
+    transform: scale(90%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+.container .menu-window .menu-window__content {
+  display: none;
+}
+.container .menu-window .menu-window__content__active {
+  display: flex;
+  position: fixed;
+  top: 0.7rem;
+  left: 0.7rem;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  background-color: #011827;
+  justify-content: center;
+}
+.container .menu-window .menu-window__content__active .menu-window__close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.container .menu-window .menu-window__content__active .menu-window__nav-bar {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.container .menu-window .menu-window__content__active .menu-window__nav-bar a {
+  display: block;
+  margin: 3rem 0;
+  font-size: 1.5rem;
+  font-family: "roboto";
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 700;
+}
+@media screen and (min-width: 1000px) {
+  .container .menu-window .menu-window__content__active {
+    display: none;
+  }
+}
+.container .menu-window__active {
+  background-color: rgba(127, 127, 127, 0.5);
+  transition: background-color 0.2s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 @media screen and (min-width: 1000px) {
   .container .main {
