@@ -1,7 +1,15 @@
-const menuWindow = document.querySelector(".menu-window");
-const menuButton = document.querySelector(".header__menu-button");
+const openButton = document.querySelector(".menu__button");
+const menu = document.querySelector(".menu");
+const grayBackground = document.querySelector(".gray-background");
 
-menuButton.addEventListener('click', () => {
+openButton.addEventListener("click", () => {
     console.log("Clicked!")
-    menuWindow.classList.toggle('menu-window__active');
-});
+    menu.classList.toggle("menu__active");
+    grayBackground.classList.toggle("gray-background__active")
+    if (menu.className == "menu menu__active") {
+        openButton.src = "images/close.png"
+    }
+    else {
+        openButton.src = "images/Group 7.png"
+    }
+})
